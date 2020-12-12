@@ -9,7 +9,7 @@ function gets()
     
     if(user != "admin" || password != "admin")
     {
-       let loc = "http://"+ window.location.hostname + "/crudmvc/?page=home";
+       let loc = "http://"+ window.location.hostname + "/freeposts/?page=home";
        alert("Usuário ou senha inválidos.");
        window.location.href = loc;
     }
