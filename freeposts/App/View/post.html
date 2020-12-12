@@ -1,0 +1,33 @@
+<h1>{{title_h1}}</h1>
+<section>
+    <article>
+        <!--Estes dados sao da tabela-->
+        <header>
+            <h2>{{post.titulo}}</h2>
+        </header>
+        <p>{{post.conteudo}}</p>
+
+
+        <div class="comments">
+            <h3>Deixe seu comentário</h3>
+            <form action="?page=post&action=addComment" method="POST">
+                <label for="nome">Nome
+                    <input type="text" name="nome">
+                </label>
+                <label for="">
+                    <textarea name="mensagem" id="" cols="30" rows="10"></textarea>
+                </label>
+
+                <input type="hidden" name="id_post" value="{{post_id}}">
+
+                <input type="submit" value="Comentar" class="button">
+            </form>
+            <hr>
+            <h2>{{comments_title}}</h2>
+            {% for comment in post.comments %}
+                <h3>{{comment.nome}}</h3>
+                <p>{{comment.mensagem}}</p>
+            {% endfor %}
+        </div>
+    </article>
+</section>   

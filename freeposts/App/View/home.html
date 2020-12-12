@@ -1,0 +1,12 @@
+<h1>{{title_h1}}</h1>
+<section>
+    {% for post in posts %}
+    <article>
+        <!--Estes dados sao da tabela-->
+        <header>
+            <h2><a href="{{link_postagem}}?page=post&id={{post.id}}">{{post.titulo}}</a></h2>
+        </header>
+        <p>{{post.conteudo | slice(0, 60)}}...</p>
+    </article>
+    {% endfor %}
+</section>   

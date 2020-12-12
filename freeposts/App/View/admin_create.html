@@ -1,0 +1,12 @@
+<h1>{{title_h1}}</h1>
+
+<form action="?page=admin&action=insertPost" method="POST">
+    <label for="">Título
+        <input type="text" name="titulo" required><!--o name e usado pelo $_POST-->
+    </label>
+
+    <label for="">Texto
+        <textarea name="conteudo" id="" cols="30" rows="10" required></textarea>
+    </label>
+    <input type="submit" value="Publicar" class="button">
+</form>

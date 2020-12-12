@@ -1,0 +1,22 @@
+<h1>{{title_h1}}</h1>
+<a href="{{link_publicacao}}?page=admin&action=createPost" class="button">Criar publicação</a>
+<table class="admin-table">
+    <thead>
+        <th>Id</th>
+        <th>Título</th>
+        <th>Alteração</th>
+        <th>Deleção</th>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <td>{{post.id}}</td>
+            <td>{{post.titulo}}</td>
+            <td><a href="?page=admin&action=changePost&id={{post.id}}">Alterar</a></td>
+            <td><a href="?page=admin&action=deletePost&id={{post.id}}">Excluir</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>  
+
+<script src="Resources/js/admin.js"></script>

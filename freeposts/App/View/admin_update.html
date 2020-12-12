@@ -1,0 +1,13 @@
+<h1>{{title_h1}}</h1>
+
+<form action="?page=admin&action=updatePost" method="POST">
+    <input type="hidden" name="id" value="{{id}}">
+    <label for="">Título
+        <input type="text" name="titulo" value="{{titulo}}" required><!--o name e usado pelo $_POST-->
+    </label>
+
+    <label for="">Texto
+        <textarea name="conteudo" id="" cols="30" rows="10" required>{{conteudo}}</textarea>
+    </label>
+    <input type="submit" value="Alterar" class="button">
+</form>
